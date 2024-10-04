@@ -13,7 +13,7 @@ class UserController extends Controller
     {
         return view("home");
     }
-    public function login(){
-        return view("login.login");
+    public function error(){
+        return view("home.404");
     }
 }

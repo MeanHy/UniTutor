@@ -1,5 +1,5 @@
 @extends('app')
-
+@section('title', 'UniTutor - Kiến thức, kinh nghiệm, trải nghiệm')
 @section('content')
 <style>
     .profile-card {

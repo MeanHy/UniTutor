@@ -1,5 +1,5 @@
 @extends('app')
-
+@section('title', 'UniTutor - Kiến thức, kinh nghiệm, trải nghiệm')
 @section('content')
 <section id="hero" style="background-image:url(images/billboard-bg.png); background-repeat: no-repeat; ">
     <div class="container">

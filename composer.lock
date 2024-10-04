@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b1505065c09951cbe1a79579a283173",
+    "content-hash": "e199c122b8319e0f9eb8e41bfbd56831",
     "packages": [
         {
             "name": "brick/math",
@@ -1298,27 +1298,27 @@
             }
         },
         {
-            "name": "huyle/login",
+            "name": "huyle/courses",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./packages/login",
-                "reference": "87dfbb8b56105a3a247ad86342942e1bd71b3f7c"
+                "url": "./packages/courses",
+                "reference": "f8d2750ea4a638a3080f028aca85307e54778847"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Huyle\\login\\Providers\\LoginServiceProvider"
+                        "Huyle\\Courses\\Providers\\CoursesServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Huyle\\login\\": "src/",
-                    "Huyle\\login\\Providers\\": "src/Providers/",
-                    "Huyle\\login\\Database\\Migrations\\": "database/migrations/",
-                    "Huyle\\login\\Database\\Seeders\\": "database/seeders/"
+                    "Huyle\\Courses\\": "src/",
+                    "Huyle\\Courses\\Providers\\": "src/Providers/",
+                    "Huyle\\Courses\\Database\\Migrations\\": "database/migrations/",
+                    "Huyle\\Courses\\Database\\Seeders\\": "database/seeders/"
                 },
                 "classmap": [
                     "src/Controllers",
@@ -1340,27 +1340,69 @@
             }
         },
         {
-            "name": "huyle/roles",
+            "name": "huyle/pay",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "./packages/roles",
-                "reference": "babbb66c615baa6bc3dd6e573d70462dea7808f9"
+                "url": "./packages/pay",
+                "reference": "4be6ffae21ad8ff2275587b5ec8447c8ed7577ef"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Huyle\\Roles\\Providers\\RoleServiceProvider"
+                        "Huyle\\Pay\\Providers\\PayServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Huyle\\Roles\\": "src/",
-                    "Huyle\\Roles\\Providers\\": "src/Providers/",
-                    "Huyle\\Roles\\Database\\Migrations\\": "database/migrations/",
-                    "Huyle\\Roles\\Database\\Seeders\\": "database/seeders/"
+                    "Huyle\\Pay\\": "src/",
+                    "Huyle\\Pay\\Providers\\": "src/Providers/",
+                    "Huyle\\Pay\\Database\\Migrations\\": "database/migrations/",
+                    "Huyle\\Pay\\Database\\Seeders\\": "database/seeders/"
+                },
+                "classmap": [
+                    "src/Controllers",
+                    "src/Providers",
+                    "src/Models",
+                    "./routes"
+                ]
+            },
+            "scripts": {
+                "post-update-cmd": [
+                    "@php artisan migrate"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "huyle/profile",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/profile",
+                "reference": "6ef5ce0e5df3c176df9d90d37996bb511f481b6b"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Huyle\\Profile\\Providers\\ProfileServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Huyle\\Profile\\": "src/",
+                    "Huyle\\Profile\\Providers\\": "src/Providers/",
+                    "Huyle\\Profile\\Database\\Migrations\\": "database/migrations/",
+                    "Huyle\\Profile\\Database\\Seeders\\": "database/seeders/"
                 },
                 "classmap": [
                     "src/Controllers",
@@ -1387,13 +1429,13 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/user",
-                "reference": "11d3c4618427959b26fa047a543021474357b821"
+                "reference": "cd5da0002269f0f2cfd7a154a3919027d5f2d494"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Huyle\\user\\Providers\\usererviceProvider"
+                        "Huyle\\user\\Providers\\UserServiceProvider"
                     ]
                 }
             },
@@ -1403,6 +1445,48 @@
                     "Huyle\\user\\Providers\\": "src/Providers/",
                     "Huyle\\user\\Database\\Migrations\\": "database/migrations/",
                     "Huyle\\user\\Database\\Seeders\\": "database/seeders/"
+                },
+                "classmap": [
+                    "src/Controllers",
+                    "src/Providers",
+                    "src/Models",
+                    "./routes"
+                ]
+            },
+            "scripts": {
+                "post-update-cmd": [
+                    "@php artisan migrate"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "huyle/wishlist",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/wishlist",
+                "reference": "2d51b7b9978be04fa4780f9460dd075556331fd1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Huyle\\Wishlist\\Providers\\WishlistServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Huyle\\Wishlist\\": "src/",
+                    "Huyle\\Wishlist\\Providers\\": "src/Providers/",
+                    "Huyle\\Wishlist\\Database\\Migrations\\": "database/migrations/",
+                    "Huyle\\Wishlist\\Database\\Seeders\\": "database/seeders/"
                 },
                 "classmap": [
                     "src/Controllers",

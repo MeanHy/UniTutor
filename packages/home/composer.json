@@ -1,0 +1,38 @@
+{
+    "name": "huyle/home",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Huyle\\Home\\": "src/",
+            "Huyle\\Home\\Providers\\": "src/Providers/",
+            "Huyle\\Home\\Database\\Migrations\\": "database/migrations/",
+            "Huyle\\Home\\Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "src/Controllers",
+            "src/Providers",
+            "src/Models",
+            "./routes"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huyle\\Home\\Providers\\HomeServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan migrate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

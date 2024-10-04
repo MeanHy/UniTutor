@@ -4,7 +4,7 @@ namespace Huyle\user\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class usererviceProvider extends ServiceProvider
+class UserServiceProvider extends ServiceProvider
 {
     public function boot()
     {

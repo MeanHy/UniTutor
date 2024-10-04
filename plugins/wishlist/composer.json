@@ -1,0 +1,38 @@
+{
+    "name": "huyle/wishlist",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Huyle\\Wishlist\\": "src/",
+            "Huyle\\Wishlist\\Providers\\": "src/Providers/",
+            "Huyle\\Wishlist\\Database\\Migrations\\": "database/migrations/",
+            "Huyle\\Wishlist\\Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "src/Controllers",
+            "src/Providers",
+            "src/Models",
+            "./routes"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huyle\\Wishlist\\Providers\\WishlistServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan migrate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

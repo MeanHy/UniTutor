@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Huyle\\user\\Providers\\usererviceProvider"
+                "Huyle\\user\\Providers\\UserServiceProvider"
             ]
         }
     },
