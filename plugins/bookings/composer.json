@@ -1,0 +1,39 @@
+{
+    "name": "huyle/bookings",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+            "Huyle\\Bookings\\": "src/",
+            "Huyle\\Bookings\\Providers\\":"src/Providers/",
+            "Huyle\\Bookings\\Database\\Migrations\\": "database/migrations/",
+            "Huyle\\Bookings\\Database\\Seeders\\": "database/seeders/"
+        },
+        "classmap": [
+            "src/Controllers",
+            "src/Providers",
+            "src/Models",
+            "./routes"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Huyle\\Bookings\\Providers\\BookingServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "@php artisan migrate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+    
+}

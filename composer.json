@@ -10,9 +10,11 @@
     "require": {
         "php": "^8.2",
         "firebase/php-jwt": "^6.10",
-        "guzzlehttp/guzzle": "^7.2" ,
+        "guzzlehttp/guzzle": "^7.2",
         "huyle/roles": "*",
+        "huyle/login": "*",
         "huyle/user": "*",
+        "huyle/bookings": "*",
         "inertiajs/inertia-laravel": "^1.3",
         "laravel/framework": "^11.00",
         "laravel/sanctum": "*",
@@ -74,12 +76,18 @@
             "merge-scripts": true
         },
         "installer-paths": {
-           "./plugins/roles":[
-            "huyle/roles"
-           ],
-           "./plugins/user":[
-            "huyle/user"
-           ]
+            "./plugins/login": [
+                "huyle/login"
+            ],
+            "./plugins/roles": [
+                "huyle/roles"
+            ],
+            "./plugins/user": [
+                "huyle/user"
+            ],
+            "./plugins/bookings": [
+                "huyle/bookings"
+            ]
         }
     },
     "config": {
@@ -97,13 +105,21 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "repositories": [
-       {
-        "type": "path",
-        "url": "./packages/roles/"
-       },
-       {
-        "type": "path",
-        "url": "./packages/user/"
-       }
+        {
+            "type": "path",
+            "url": "./packages/login/"
+        },
+        {
+            "type": "path",
+            "url": "./packages/roles/"
+        },
+        {
+            "type": "path",
+            "url": "./packages/user/"
+        },
+        {
+            "type": "path",
+            "url": "./packages/bookings/"
+        }
     ]
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d840cf95ab5462ee5b793d1f3efe7bfc",
+    "content-hash": "3b1505065c09951cbe1a79579a283173",
     "packages": [
         {
             "name": "brick/math",
@@ -1254,6 +1254,90 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "huyle/bookings",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/bookings",
+                "reference": "f48a46a9b0fe6265b1ccdaa8559f43d214162d53"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Huyle\\Bookings\\Providers\\BookingServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Huyle\\Bookings\\": "src/",
+                    "Huyle\\Bookings\\Providers\\": "src/Providers/",
+                    "Huyle\\Bookings\\Database\\Migrations\\": "database/migrations/",
+                    "Huyle\\Bookings\\Database\\Seeders\\": "database/seeders/"
+                },
+                "classmap": [
+                    "src/Controllers",
+                    "src/Providers",
+                    "src/Models",
+                    "./routes"
+                ]
+            },
+            "scripts": {
+                "post-update-cmd": [
+                    "@php artisan migrate"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "huyle/login",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/login",
+                "reference": "87dfbb8b56105a3a247ad86342942e1bd71b3f7c"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Huyle\\login\\Providers\\LoginServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Huyle\\login\\": "src/",
+                    "Huyle\\login\\Providers\\": "src/Providers/",
+                    "Huyle\\login\\Database\\Migrations\\": "database/migrations/",
+                    "Huyle\\login\\Database\\Seeders\\": "database/seeders/"
+                },
+                "classmap": [
+                    "src/Controllers",
+                    "src/Providers",
+                    "src/Models",
+                    "./routes"
+                ]
+            },
+            "scripts": {
+                "post-update-cmd": [
+                    "@php artisan migrate"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "huyle/roles",
